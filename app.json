@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list" , 
+    "pages/template/template"
+
+  
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FF0000",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "this my demo"
+  }
+}

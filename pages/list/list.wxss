@@ -1,0 +1,17 @@
+/* pages/list/list.wxss */
+
+@import '/pages/template/template.wxss';
+page{
+  background: #eee;
+}
+swiper{
+  height:400rpx;
+  width:100%;
+}
+swiper image{
+  height:100%;
+  width:100%;
+}
+.itemList{
+  margin: 20rpx 0;
+}

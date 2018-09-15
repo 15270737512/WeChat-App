@@ -1,0 +1,6 @@
+<!--pages/index/index.wxml-->
+<view class='indexContainer'>
+  <image class='usernameavater' src="{{userInfo.avatarUrl}}"></image>
+  <text class='userName' >{{userInfo.nickName}}</text>
+<button style='display:{{userState?"none":"block"}}' bindgetuserinfo='getUserTap' open-type="getUserInfo">获取用户信息 </button>
+</view>

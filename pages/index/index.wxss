@@ -1,0 +1,33 @@
+/* pages/index/index.wxss */
+page{
+  background: white;
+}
+
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.usernameavater{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rem;
+  margin: 100rpx 0;
+}
+.userName{
+   margin: 50rpx 0;
+   font-size: 32rpx;
+   font-weight: bold;
+}
+.begin{
+  width: 500rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin: 30rpx 0;
+  border: 1px solid black;
+  border-radius: 10rpx;
+ 
+}

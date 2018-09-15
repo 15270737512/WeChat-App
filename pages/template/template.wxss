@@ -1,0 +1,46 @@
+/* template/template.wxss */
+.templateContainer{
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  background: white;
+  padding:10rpx 0;
+  border-radius: 10rpx;
+  width: 50%;
+  height: 500rpx;
+}
+
+.avatarImage{
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;   /* *使得头像与文字保持在一条水平线上 */
+  margin-right: 10rpx;
+}
+.dateTime{
+  font-size: 32rpx;
+}
+.title{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.contentImage{
+  height: 300rpx;
+  width: 350rpx;
+}
+.contentText{
+  font-size: 32rpx;
+  text-indent: 32rpx;
+}
+.icon{
+  height:26rpx;
+  width: 26rpx; 
+  margin-right: 10rpx;
+
+}
+
+.number{
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
