@@ -16,10 +16,12 @@
     </swiper-item>
   </swiper>
 
+  <view class='templates'>
   <block wx:for="{{listArr}}" wx:key="{{index}}" >
     <view class='itemList' >
       <template is="templateList" data='{{...item}}'/>
     </view>
   </block>
+  </view>
 
 </view>

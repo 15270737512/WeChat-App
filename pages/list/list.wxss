@@ -15,3 +15,8 @@ swiper image{
 .itemList{
   margin: 20rpx 0;
 }
+.templates{
+  width: 99%;
+  float: right;
+
+}

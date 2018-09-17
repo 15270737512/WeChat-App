@@ -1,15 +1,21 @@
 /* template/template.wxss */
 .templateContainer{
+  /* display: inline-block; */
   display: flex;
   flex-direction: column;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
   background: white;
-  padding:10rpx 0;
+  padding:10rpx 5rpx;
   border-radius: 10rpx;
-  width: 50%;
+  width: 350rpx;
   height: 500rpx;
+  float: right;
+  margin-right: 11rpx;
+  margin-bottom: 10rpx;
+  
+
 }
 
 .avatarImage{
