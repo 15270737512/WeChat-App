@@ -1,0 +1,44 @@
+<!--pages/release/release.wxml-->
+<view>
+  <!-- 商品标题 -->
+  <view class='productHaddle'>
+    <input type='text' placeholder="请输入闲置物品名称" placeholder-style="font-size:32rpx; margin-left: 10rpx;letter-spacing:3rpx;" class='productName'></input>
+  </view>
+  <!-- 商品内容 -->
+  <view class="productContent">
+  <!-- 商品标题 -->
+    <input placeholder="请简要描述一下物品的细节,务必填写**联系方式**哦" placeholder-style="font-size:26rpx; margin-left: 10rpx;letter-spacing:3rpx;"></input>
+  <!-- 商品详情描述 图片上传 -->
+
+    <view class='imageContainer' catchtap='uploadImage'>
+      <image src='/images/icon/addImage.png'></image>
+      <view class="imageName">添加</view>
+      <view class='uploadImages'>
+      <view wx:for="{{uploadImages}}" wx:key='{{index}}' >
+      <image src='{{uploadImages[index]}}'></image>
+      </view>
+      </view>
+    </view>
+
+  <!-- 分类 -->
+    <view class='category'>
+      <text class='categoryText'>分类</text>
+      <text class='plzCategory'>请选择分类></text>
+    </view>
+
+  <view class='tip'>
+  <text>tip:联系方式尽量添小号哦 以免不必要的骚扰:(</text>
+  </view>
+
+
+  <!-- 提交按钮 -->
+    <view class='submit'>
+      <button>提交审核，通过后自动上架:)</button>
+    </view>
+
+
+  </view>
+
+
+
+</view>

@@ -1,33 +1,19 @@
-// pages/list/list.js
-
-let datas = require('../../datas/list-data.js')
-
+// pages/me/me.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //循环列表数据
-    listArr:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({
-        listArr: datas.list_data
-      })
+
   },
-
-  linkToDetail(){   
-    wx.navigateTo({
-      url: '/pages/detail/detail',
-    })
-  },
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,33 +1,46 @@
-// pages/list/list.js
-
-let datas = require('../../datas/list-data.js')
-
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    //循环列表数据
-    listArr:[]
+    msgData: [] 
   },
+  changeInputValue(ev) {
+    this.setData({
+      inputVal: ev.detail.value
+    })
+  },
+  //删除留言
+  DelMsg(ev) {
+    var n = ev.target.dataset.index;
 
+    var list = this.data.msgData;
+    list.splice(n, 1);
+
+    this.setData({
+      msgData: list
+    });
+  },
+  //添加留言
+  addMsg() {
+    var list = this.data.msgData;
+    list.push({
+      msg: this.data.inputVal
+    });
+    //更新
+    this.setData({
+      msgData: list,
+      inputVal: ''
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.setData({
-        listArr: datas.list_data
-      })
+
   },
-
-  linkToDetail(){   
-    wx.navigateTo({
-      url: '/pages/detail/detail',
-    })
-  },
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成

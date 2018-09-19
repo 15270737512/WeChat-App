@@ -1,14 +1,39 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/list/list" , 
-    "pages/template/template"
-
-  
+    "pages/list/list",
+    "pages/template/template",
+    "pages/detail/detail",
+    "pages/release/release",
+    "pages/me/me"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF0000",
     "enablePullDownRefresh": true,
-    "navigationBarTitleText": "this my demo"
+    "navigationBarTitleText": "首页"
+  },
+  "tabBar": {
+    "color": "#030303",
+    "selectedColor": "CD2626",
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "首页",
+        "iconPath": "/images/tab/shoping.png",
+        "selectedIconPath": "/images/tab/shoping_ing.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "text": "发布",
+        "iconPath": "/images/tab/release.png",
+        "selectedIconPath": "/images/tab/release_ing.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "/images/tab/me.png",
+        "selectedIconPath": "/images/tab/me_ing.png"
+      }
+    ]
   }
 }

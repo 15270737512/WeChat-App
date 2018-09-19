@@ -1,6 +1,7 @@
 <!--pages/list/list.wxml-->
-<import src="/pages/template/template.wxml" />
 <view>
+  <import src="/pages/template/template.wxml" />
+
   <swiper indicator-dots indicator-color='white' indicator-active-color="red" autoplay interval='4500' circularl>
     <swiper-item>
       <image src='/images/detail/carousel/01.jpg'></image>
@@ -17,11 +18,10 @@
   </swiper>
 
   <view class='templates'>
-  <block wx:for="{{listArr}}" wx:key="{{index}}" >
-    <view class='itemList' >
-      <template is="templateList" data='{{...item}}'/>
-    </view>
-  </block>
+    <block wx:for="{{listArr}}" wx:key="{{index}}">
+      <view class='itemList' bindtap='linkToDetail'>
+        <template is="templateList" data='{{...item}}' />
+      </view>
+    </block>
   </view>
-
 </view>

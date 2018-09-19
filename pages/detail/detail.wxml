@@ -1,0 +1,58 @@
+<view>
+  <swiper indicator-dots indicator-color='white' indicator-active-color="red" autoplay interval='4500' circularl>
+    <!-- 顶部轮播图 -->
+    <swiper-item>
+      <image src='/images/detail/carousel/01.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/detail/carousel/02.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/detail/carousel/03.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/detail/carousel/04.jpg'></image>
+    </swiper-item>
+
+  </swiper>
+  <!-- 下半部内容区 -->
+  <view class='contentContainer'>
+    <!-- 用户信息 -->
+    <view class='userMessage'>
+      <image src='/images/avatar/0.png'></image>
+      <text class='username'>username</text>
+      <text class='createTime'>2018-09-11</text>
+    </view>
+    <!-- 联系方式 -->
+    <view>
+      <text>联系方式：</text>
+    </view>
+    <view>
+      <text>商品详情：</text>
+    </view>
+
+
+
+   <view class="msg-box">
+ <!--留言-->
+    <view class="send-box">
+       <input bindinput="changeInputValue" class="input" type="text" value="{{inputVal}}" placeholder="请输入留言……" placeholder-class="place-input"/>
+        <button size="mini" type="primary" bindtap="addMsg">添加</button>
+     </view>
+     <!--留言列表-->
+     <text class="msg-info" wx:if="{{msgData.length==0}}">暂无留言……^_^</text>
+    <view class="list-view">
+       <view class="item" wx:for="{{msgData}}" wx:key="{{index}}">
+         <text class="text1">{{item.msg}}</text>
+         <!--button size="mini" plain class="close-btn" type="default">删除</button-->
+         <icon type="cancel" bindtap="DelMsg" data-index="{{index}}" class="close-btn" />
+       </view>
+    </view>
+ </view>
+
+
+
+
+  </view>
+
+</view>

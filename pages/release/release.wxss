@@ -1,0 +1,80 @@
+/* pages/release/release.wxss */
+page{
+  background: #eee;
+}
+.productHaddle{
+  background:white; 
+}
+.productName{
+  border-bottom: 1rpx rgba(214, 214, 214, 0.466) solid;
+  width: 100%;
+  height: 90rpx;
+}
+.productContent{
+  background:white; 
+  width: 100%;
+  height: 500rpx;
+}
+.imageContainer{
+  width: 140rpx;
+  height: 140rpx;
+  background: rgb(248, 247, 247);
+  margin-top: 260rpx;
+  margin-left: 20rpx;
+}
+.productContent image{
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+.imageName{
+  font-size:25rpx;
+  margin-left: 40rpx;
+}
+.category{
+  margin-top: 70rpx;
+  height: 75rpx;
+  background: white;
+}
+.categoryText{
+  font-size: 32rpx;
+  color: #666;
+  line-height: 70rpx;
+  margin-left: 10rpx;
+}
+.plzCategory{
+  font-size: 32rpx;
+  color: #666;
+  line-height: 70rpx;
+  float: right;
+  margin-right: 10rpx;
+}
+.submit{
+  margin-top: 35rpx;
+  
+}
+.submit button{
+  width: 95%;
+  background: rgb(235, 67, 67);
+  color: white;
+}
+.tip{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: rgb(247, 8, 8);
+  margin-left: 30rpx;
+}
+.uploadImages{
+  width:400rpx; 
+  height: 400rpx;
+  margin-top: -135rpx;
+  margin-left: 110rpx;
+  display: flex;
+  flex-direction: row;
+}
+.uploadImages image{
+  width: 142rpx;
+  height: 142rpx;
+
+}

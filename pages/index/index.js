@@ -33,7 +33,7 @@ Page({
           this.setData({
             userState: true
           })
-          wx.redirectTo({
+          wx.switchTab({
             url: '/pages/list/list',
           })
         } else {

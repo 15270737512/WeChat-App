@@ -18,5 +18,4 @@ swiper image{
 .templates{
   width: 99%;
   float: right;
-
 }
