@@ -5,10 +5,11 @@
     "pages/template/template",
     "pages/detail/detail",
     "pages/release/release",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/category/category"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#FF0000",
+    "navigationBarBackgroundColor": "#8CC24A",
     "enablePullDownRefresh": true,
     "navigationBarTitleText": "首页"
   },

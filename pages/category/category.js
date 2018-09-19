@@ -1,41 +1,43 @@
-// pages/release/release.js
+// pages/category/category.js
+
+let datas = require("../../datas/list-category.js");
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    uploadImages:[],
-    chooceCate:{},
-    cateType:false
+    cateItems:[],
+    curNav: 1,
+    curIndex: 0
   },
-
-  uploadImage(){
-    console.log("tap this ")
-    wx.chooseImage({
-      count:3,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success : (res) => {
-        console.log(res.tempFilePaths)
-        this.setData({
-          uploadImages:res.tempFilePaths
-        })
-      },
+  //事件处理函数  
+  switchRightTab: function (e) {
+    // 获取item项的id，和数组的下标值  
+    let id = e.target.dataset.id,
+      index = parseInt(e.target.dataset.index);
+    // 把点击到的某一项，设为当前index  
+    this.setData({
+      curNav: id,
+      curIndex: index
     })
   },
-  /**前往分类页 */
-  goToCategoryPage(){
-    wx.navigateTo({
-      url: '/pages/category/category',
+  /**选择分类 获得 点击对象 跳转回发布商品 */
+  navigatorToRelease(e){
+    /**赋值到全局数据中 */
+    getApp().tapCate = e.currentTarget.dataset;
+    wx.navigateBack({
+      url: '/pages/release/release',
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
+   this.setData({
+     cateItems:datas
+   })
   },
 
   /**
@@ -49,16 +51,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let cate = getApp().tapCate;
-    /**用作判断是否显示 选着分类 */
-    let typeCate =Object.keys(cate).length;
-    if (typeof (cate) != "undefined"&&typeCate!=0){
-      this.setData({
-        chooseCate: cate,
-        cateType:true
-      })  
-    }
-    
+
   },
 
   /**

@@ -36,7 +36,10 @@ page{
   margin-top: 70rpx;
   height: 75rpx;
   background: white;
+  /* border: 1rpx red solid; */
+  
 }
+
 .categoryText{
   font-size: 32rpx;
   color: #666;
@@ -49,6 +52,9 @@ page{
   line-height: 70rpx;
   float: right;
   margin-right: 10rpx;
+  margin-top: -137rpx;
+  /* border: 1rpx red solid; */
+  height: 78rpx;
 }
 .submit{
   margin-top: 35rpx;

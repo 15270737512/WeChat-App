@@ -9,11 +9,11 @@
   <!-- 商品标题 -->
     <input placeholder="请简要描述一下物品的细节,务必填写**联系方式**哦" placeholder-style="font-size:26rpx; margin-left: 10rpx;letter-spacing:3rpx;"></input>
   <!-- 商品详情描述 图片上传 -->
-
     <view class='imageContainer' catchtap='uploadImage'>
       <image src='/images/icon/addImage.png'></image>
       <view class="imageName">添加</view>
       <view class='uploadImages'>
+      <!-- 图片上传 -->
       <view wx:for="{{uploadImages}}" wx:key='{{index}}' >
       <image src='{{uploadImages[index]}}'></image>
       </view>
@@ -23,7 +23,16 @@
   <!-- 分类 -->
     <view class='category'>
       <text class='categoryText'>分类</text>
-      <text class='plzCategory'>请选择分类></text>
+     
+      <view wx:if="{{cateType}}">
+      <text class='plzCategory' catchtap='goToCategoryPage'> 
+      {{chooseCate.name}} ></text>
+      </view>
+      
+      <view wx:if="{{!cateType}}">
+      <text class='plzCategory' catchtap='goToCategoryPage'> 
+      请选择分类 ></text></view>
+    
     </view>
 
   <view class='tip'>
