@@ -6,7 +6,7 @@
     <text class='dateTime' >{{date}}</text>
   </view>
 
-  <view>
+  <view class='textContainer'>
     <text class='title'>{{title}}</text>
     <image class='contentImage' src='{{detail_img}}'></image>
     <text class='contentText'>{{detail_content}}</text>

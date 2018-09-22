@@ -36,6 +36,11 @@
   width: 350rpx;
 }
 .contentText{
+  width: 100%;
+   display: block;
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   font-size: 32rpx;
   text-indent: 32rpx;
 }

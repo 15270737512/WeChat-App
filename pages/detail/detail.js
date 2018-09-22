@@ -1,12 +1,43 @@
 // pages/detail/detail.js
+let detaliData = require("../../datas/list-detail.js") // 商品详情 
+let messageData = require("../../datas/list-message.js") //商品的留言
+let flag = getApp().i;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    msgData: [] 
+    msgData: [] ,
+    itemData:[],
+    starUrl:"/images/icon/none-star.png"
+
   },
+  // 点击收藏
+  tapStar(){
+    if (flag){
+      this.setData({
+        starUrl: "/images/icon/star.png"
+      })
+      flag=false
+      wx.showToast({
+        title: '已收藏',
+      })
+      return ;
+    }
+    if (!flag){
+      this.setData({
+        starUrl: "/images/icon/none-star.png"
+      })
+      wx.showToast({
+        title: '已取消',
+      })
+      flag=true
+      
+    }
+   
+  },
+  
   changeInputValue(ev) {
     this.setData({
       inputVal: ev.detail.value
@@ -14,32 +45,67 @@ Page({
   },
   //删除留言
   DelMsg(ev) {
-    var n = ev.target.dataset.index;
-
-    var list = this.data.msgData;
-    list.splice(n, 1);
-
-    this.setData({
-      msgData: list
-    });
+    wx.showModal({
+      title: '删除',
+      content: '确定要删除我？qaq',
+      success : (reslut)=>{
+        if(reslut.confirm){ //点击了删除
+          var n = ev.target.dataset.index;
+          var list = this.data.msgData;
+          list.splice(n, 1);
+          this.setData({
+            msgData: list
+          });
+        }
+      }
+    })
+  
+  },
+  //获取用户信息
+  getUser:function(){
+   
   },
   //添加留言
   addMsg() {
-    var list = this.data.msgData;
-    list.push({
-      msg: this.data.inputVal
-    });
-    //更新
-    this.setData({
-      msgData: list,
-      inputVal: ''
-    });
+    wx.getUserInfo({
+      success: (result) => {
+        console.log(result)
+        var list ={}
+        let inputVal = this.data.inputVal;
+        /**判断空格 */
+        var re = /^\s+$/;
+   
+        if (inputVal != "" && inputVal != null && !re.exec(inputVal)) {
+          //输入的内容放入变量中
+          list={
+            msg_author:result.userInfo.nickName,
+            product_id:result.userInfo.id,
+            msg_content: this.data.inputVal
+          };
+          //更新 发送请求 添加到数据库 然后刷新页面
+
+        } else {
+          wx.showToast({
+            title: '留点什么吧:)',
+            icon: "none"
+          })
+        }
+
+    
+      }
+    })
+
+  
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      itemData: detaliData,
+      msgData: messageData
+    })
+    
   },
 
   /**

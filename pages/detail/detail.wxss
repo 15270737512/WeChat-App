@@ -65,7 +65,7 @@ swiper image {
 }
 
 .place-input {
-  color: salmon;
+  color: #eee;
 }
 
 .list-view {
@@ -74,16 +74,48 @@ swiper image {
 
 .item {
   overflow: hidden;
-  border-bottom: 1px dashed #87ceff;
-  height: 30px;
+  border-bottom: 1px dashed rgb(140, 194, 74);
+  height: auto;
   line-height: 30px;
+  margin-bottom: 10rpx;
+  
 }
 
-.text1 {
+.msg {
   float: left;
+  display: block;
+  font-size: 32rpx;
+  letter-spacing: 3rpx;
+  text-indent: 1rem;
+
 }
 
 .close-btn {
   float: right;
   margin: 5px 5px 0 0;
+}
+.userInfo{
+  width: 100%;
+}
+.userInfo image{
+  
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.userInfo text{
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: rgb(201, 198, 198);
+}
+.messageDate{
+  float:right;
+}
+.starIcon{
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
 }

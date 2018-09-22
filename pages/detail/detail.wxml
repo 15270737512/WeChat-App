@@ -19,36 +19,41 @@
   <view class='contentContainer'>
     <!-- 用户信息 -->
     <view class='userMessage'>
-      <image src='/images/avatar/0.png'></image>
-      <text class='username'>username</text>
-      <text class='createTime'>2018-09-11</text>
+      <image src='{{itemData.userInfo.avatarUrl}}'></image>
+      <text class='username'>{{itemData.userInfo.username}}</text>
+      <text class='createTime'>{{itemData.upload_date}}</text>
+      <image src='{{starUrl}}' class='starIcon' catchtap='tapStar'></image>
     </view>
     <!-- 联系方式 -->
     <view>
-      <text>联系方式：</text>
-    </view>
-    <view>
-      <text>商品详情：</text>
+      <text>{{itemData.detail_content}}</text>
     </view>
 
 
 
-   <view class="msg-box">
- <!--留言-->
-    <view class="send-box">
-       <input bindinput="changeInputValue" class="input" type="text" value="{{inputVal}}" placeholder="请输入留言……" placeholder-class="place-input"/>
+    <view class="msg-box">
+      <!--留言-->
+      <view class="send-box">
+        <input bindinput="changeInputValue" class="input" type="text" value="{{inputVal}}" placeholder="请输入留言……" placeholder-class="place-input" maxlength='100' />
         <button size="mini" type="primary" bindtap="addMsg">添加</button>
-     </view>
-     <!--留言列表-->
-     <text class="msg-info" wx:if="{{msgData.length==0}}">暂无留言……^_^</text>
-    <view class="list-view">
-       <view class="item" wx:for="{{msgData}}" wx:key="{{index}}">
-         <text class="text1">{{item.msg}}</text>
-         <!--button size="mini" plain class="close-btn" type="default">删除</button-->
-         <icon type="cancel" bindtap="DelMsg" data-index="{{index}}" class="close-btn" />
-       </view>
+      </view>
+      <!--留言列表-->
+      <text class="msg-info" wx:if="{{msgData.length==0}}">暂无留言:)</text>
+
+      <view class="list-view">
+        <view class="item" wx:for="{{msgData}}" wx:key="{{index}}" bindlongtap="DelMsg">
+          <view class='userInfo'>
+            <image src='{{msgData[index].author_avatarUrl}}'></image>
+            <text>{{msgData[index].msg_author}}</text>
+            <text class='messageDate'>{{msgData[index].msg_time}}</text>
+
+          </view>
+          <text class="msg">{{msgData[index].msg_content}}</text>
+        
+        </view>
+       
+      </view>
     </view>
- </view>
 
 
 

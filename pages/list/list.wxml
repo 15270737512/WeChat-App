@@ -1,7 +1,7 @@
 <!--pages/list/list.wxml-->
 <view>
   <import src="/pages/template/template.wxml" />
-
+  <!-- 顶部轮播图 -->
   <swiper indicator-dots indicator-color='white' indicator-active-color="red" autoplay interval='4500' circularl>
     <swiper-item>
       <image src='/images/detail/carousel/01.jpg'></image>
@@ -16,7 +16,29 @@
       <image src='/images/detail/carousel/04.jpg'></image>
     </swiper-item>
   </swiper>
+  <!-- 分类区-->
+  <view class="cateGory">
+    <view class='cateContainer'>
+      <image class='lifeImage' src='/images/icon/life.png'></image>
+      <text class='life'>生活杂物</text>
+    </view>
+    <view class='cateContainer1'>
+      <image src='/images/icon/phone.png'></image>
+      <text>电子数码</text>
+    </view>
+    <view class='cateContainer2'>
+      <image src="/images/icon/yifu.png"></image>
+      <text>穿搭美妆</text>
+    </view>
+    <view class='cateContainer3'> 
+      <image src='/images/icon/book.png'></image>
+      <text>图书杂志</text>
+    </view>
+    
+  </view>
 
+
+  <!-- 商品列表展示区 -->
   <view class='templates'>
     <block wx:for="{{listArr}}" wx:key="{{index}}">
       <view class='itemList' bindtap='linkToDetail'>

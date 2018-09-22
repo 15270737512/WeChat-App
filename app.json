@@ -11,6 +11,7 @@
   "window": {
     "navigationBarBackgroundColor": "#8CC24A",
     "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
     "navigationBarTitleText": "首页"
   },
   "tabBar": {
@@ -20,8 +21,8 @@
       {
         "pagePath": "pages/list/list",
         "text": "首页",
-        "iconPath": "/images/tab/shoping.png",
-        "selectedIconPath": "/images/tab/shoping_ing.png"
+        "iconPath": "/images/tab/index.png",
+        "selectedIconPath": "/images/tab/index_ing.png"
       },
       {
         "pagePath": "pages/release/release",

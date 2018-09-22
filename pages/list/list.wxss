@@ -19,3 +19,79 @@ swiper image{
   width: 99%;
   float: right;
 }
+.cateGory{
+  display: flex;
+  flex-direction: row;
+  
+  height: 18 0rpx;
+  background: white 
+}
+.cateContainer image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.cateContainer text{
+  font-size: 25rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.cateContainer{
+ display: block;
+ width: 180rpx;
+ height: 180rpx;
+ margin-left: 10rpx;
+}
+.cateContainer1{
+  display: block;
+ /* margin-left:10rpx; */
+ width: 180rpx;
+ height: 180rpx;
+}
+.cateContainer1 image{
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  
+}
+.cateContainer1 text{
+  font-size: 25rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.cateContainer2{
+  display: block;
+   width: 160rpx;
+ height: 180rpx;
+
+}
+.cateContainer2 image{
+   margin-left: 30rpx;
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.cateContainer2 text{
+  font-size: 25rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.cateContainer3{
+  display: block;
+   width: 160rpx;
+ height: 180rpx;
+ margin-left:20rpx; 
+ }
+.cateContainer3 text{
+  font-size: 25rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.cateContainer3 image{
+   margin-left: 30rpx;
+  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}

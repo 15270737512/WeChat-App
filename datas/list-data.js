@@ -6,7 +6,7 @@ let list_data = [
     title: '教育理念',
     detail_img: '/images/detail/carousel/02.jpg',
     avatar: '/images/avatar/4.png',
-    detail_content: '让每一贡献力量。',
+    detail_content: '让每一贡献力量你懂啊掉你大篇幅哪怕的萨芬皮肤',
     headImgSrc: '/images/detail/carousel/02.jpg',
     author: '钢铁侠 ',
     dataTime: '24time',
@@ -67,7 +67,7 @@ let list_data = [
     postId: 2
   },
   {
-    date: '2018/3/15 下午 4:30:35',
+    date: '2018/3/1',
     title: '贾静雯简介',
     detail_img: '/images/detail/list/j2.jpg',
     detail_content: '贾静雯（Alys军。',
@@ -86,7 +86,7 @@ let list_data = [
     postId: 3
   },
   {
-    date: '2018/3/17 下午3:30:35',
+    date: '2018/3',
     title: '贾静雯作品展',
     detail_img: '/images/detail/list/j3.jpg',
     detail_content: '2001年，贾心转',

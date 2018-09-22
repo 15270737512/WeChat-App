@@ -27,6 +27,7 @@ page{
   height: 55rpx;
   margin-left: 40rpx;
   margin-top: 20rpx;
+  
 }
 .imageName{
   font-size:25rpx;

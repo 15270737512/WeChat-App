@@ -1,6 +1,9 @@
 App({
 
     tapCate:{},
+    i : true,
+
+
 
 
 
@@ -9,7 +12,10 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    wx.showLoading({
+      title: '玩命加载中0.0.',
+      mask: true
+    })
   },
 
   /**
